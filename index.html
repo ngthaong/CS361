@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Dining</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen active">
+        <div class="container-center">
+            <div class="content-box">
+                <h1 class="main-title">CAMPUS DINING</h1>
+                <p class="subtitle">Your guide to every meal on campus. Find what's open, see what's on the menu.</p>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="showScreen('loginScreen')">Log In</button>
+                    <button class="btn btn-secondary" onclick="showScreen('loginScreen')">Register</button>
+                </div>
+                <p class="footer-text">Try it For Free | <span class="link">Learn More</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen">
+        <div class="container-center">
+            <div class="content-box">
+                <h1 class="main-title">WELCOME BACK</h1>
+                <p class="subtitle">Log in to continue your culinary journey.</p>
+                
+                <div class="login-form">
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-input">
+                    </div>
+                    
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                    
+                    <button class="btn btn-gray full-width" onclick="showScreen('locationsScreen')">Log In</button>
+                    
+                    <p class="register-text">Don't have account? <a href="#" class="link">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Locations Screen -->
+    <div id="locationsScreen" class="screen">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">CAMPUS DINING</h1>
+                <div class="header-icons">
+                    <button class="icon-btn">🛒</button>
+                    <button class="icon-btn">👤</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h2 class="page-title">Find a place to eat</h2>
+            <p class="page-subtitle">Explore cafes, dining halls, and quick bites across campus.</p>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search for a dining hall, cafe..." class="search-input">
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card" onclick="showScreen('menuScreen')">
+                    <div class="card-header">
+                        <h3 class="card-title">Arnold Dining Hall</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">7:00 AM - 8:00 PM</p>
+                    <p class="card-description">The main campus dining hall featuring a wide variety of cuisines and dessert stations.</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">McNary Dining Hall</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">7:00 AM - 8:00 PM</p>
+                    <p class="card-description">Global cuisine with rotating international stations. Features outdoor seating.</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Trader Bing's</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">7:30 AM - 6:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> Austin Hall</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Dixon Cafe</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">7:30 AM - 10:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> Dixon Recreation Center</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cascadia Market</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">9:00 AM - 10:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> International Living-Learning Center</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cascadia Cafe</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">7:30 AM - 6:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> International Living-Learning Center</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cascadia Deli</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">11:00 AM - 9:30 PM</p>
+                    <p class="card-description"><strong>Location:</strong> International Living-Learning Center</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">West Side Cafe</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">7:00 AM - 9:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> West Campus Hall</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">West Side Market</h3>
+                        <span class="badge badge-open">Open</span>
+                    </div>
+                    <p class="card-hours">8:00 AM - 11:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> West Campus Hall</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="card-header">
+                        <h3 class="card-title">West Side Grill</h3>
+                        <span class="badge badge-closed">Closed</span>
+                    </div>
+                    <p class="card-hours">11:00 AM - 7:00 PM</p>
+                    <p class="card-description"><strong>Location:</strong> West Campus Hall</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Menu Screen -->
+    <div id="menuScreen" class="screen">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">CAMPUS DINING</h1>
+                <div class="header-icons">
+                    <button class="icon-btn">🛒</button>
+                    <button class="icon-btn">👤</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <button class="back-btn" onclick="showScreen('locationsScreen')">← Back to all locations</button>
+
+            <div class="menu-container">
+                <div class="menu-header">
+                    <h2 class="menu-title">Arnold Dining Hall</h2>
+                    <div class="menu-info">
+                        <span class="badge badge-open">Open</span>
+                        <span class="menu-hours">7:00 AM - 8:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="menu-content">
+                    <h3 class="section-title">Menu Items</h3>
+                    
+                    <!-- Breakfast -->
+                    <div class="menu-section">
+                        <h4 class="category-title">Breakfast</h4>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Scramble Eggs ($3.50)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Scramble Eggs', '$3.50')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Pancakes with Syrup ($4.25)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Pancakes with Syrup', '$4.25')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Bacon & Sausage Platter ($5.00)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Bacon & Sausage Platter', '$5.00')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Fresh Fruit Bowl ($3.00)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Fresh Fruit Bowl', '$3.00')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Oatmeal with Toppings ($2.75)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Oatmeal with Toppings', '$2.75')">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Lunch -->
+                    <div class="menu-section">
+                        <h4 class="category-title">Lunch</h4>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Grilled Chicken Sandwich ($6.50)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Grilled Chicken Sandwich', '$6.50')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Caesar Salad ($5.75)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Caesar Salad', '$5.75')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Beef Burger with Fries ($7.25)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Beef Burger with Fries', '$7.25')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Veggie Wrap ($5.50)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Veggie Wrap', '$5.50')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Tomato Soup & Grilled Cheese ($6.00)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Tomato Soup & Grilled Cheese', '$6.00')">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Dinner -->
+                    <div class="menu-section">
+                        <h4 class="category-title">Dinner</h4>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Grilled Salmon with Rice ($9.50)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Grilled Salmon with Rice', '$9.50')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Spaghetti Bolognese ($7.75)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Spaghetti Bolognese', '$7.75')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Vegetable Stir Fry ($6.75)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Vegetable Stir Fry', '$6.75')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">BBQ Chicken with Mashed Potatoes ($8.25)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('BBQ Chicken with Mashed Potatoes', '$8.25')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Eggplant Parmesan ($7.50)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Eggplant Parmesan', '$7.50')">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Beverages & Desserts -->
+                    <div class="menu-section">
+                        <h4 class="category-title">Beverages & Desserts</h4>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Fountain Drink ($1.50)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Fountain Drink', '$1.50')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Fresh Brewed Coffee ($2.00)</p>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Fresh Brewed Coffee', '$2.00')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Chocolate Chip Cookie ($1.75)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Chocolate Chip Cookie', '$1.75')">Add</button>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <p class="item-name">Ice Cream Sundae ($3.25)</p>
+                                <span class="badge-v">V</span>
+                            </div>
+                            <button class="btn btn-add" onclick="showConfirmModal('Ice Cream Sundae', '$3.25')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm Add to Cart</h3>
+            <p class="modal-text">Do you want to add this item to your cart?</p>
+            <div class="modal-item">
+                <p class="modal-item-name" id="modalItemName"></p>
+                <p class="modal-item-price" id="modalItemPrice"></p>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-confirm" onclick="confirmAddToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
